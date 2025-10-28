@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Email App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f1f1f1; }
+        .header { background: #4285f4; color: white; padding: 1em; text-align: center; font-size: 1.2em; }
+        .email-list, .email-content { padding: 1em; }
+        .email-item { background: white; margin-bottom: 0.5em; padding: 1em; border-radius: 5px; cursor: pointer; }
+        .email-item:hover { background: #e8f0fe; }
+        .hidden { display: none; }
+        .back-button { color: #4285f4; cursor: pointer; margin-bottom: 1em; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="header">hongtae.kim@mckinsey.com</div>
+
+    <div class="email-list" id="inbox">
+        <div class="email-item" onclick="openEmail()">
+            <strong>Project Update – APAC Retail Strategy</strong><br>
+            <small>sonny.kim@mckinsey.com - Please find the latest deck and client feedback summary...</small>
+        </div>
+        <div class="email-item">
+            <strong>Research Update – GenAI in Supply Chains</strong><br>
+            <small>research@mckinsey.com - Attached is the latest research brief on GenAI adoption...</small>
+        </div>
+        <div class="email-item">
+            <strong>Insight Newsletter – October Edition</strong><br>
+            <small>insights@mckinsey.com - This month’s insights cover pricing strategy trends...</small>
+        </div>
+    </div>
+
+    <div class="email-content hidden" id="emailDetail">
+        <div class="back-button" onclick="goBack()">&larr; Back to Inbox</div>
+        <p><strong>From:</strong> sonny.kim@mckinsey.com</p>
+        <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+        <p><strong>Subject:</strong> Project Update – APAC Retail Strategy</p>
+        <p><strong>Date:</strong> October 28, 2025</p>
+        <p>Hi Hongtae,</p>
+        <p>Hope you're well. Here's a quick update on the APAC Retail Strategy engagement:</p>
+        <ul>
+            <li>Client feedback on the initial hypothesis deck was positive overall.</li>
+            <li>They’ve requested deeper analysis on pricing elasticity in Tier 2 cities.</li>
+            <li>Next workshop is confirmed for <strong>Friday, 10 AM SGT</strong>.</li>
+            <li>Please review the updated deck before EOD Thursday.</li>
+        </ul>
+        <p>Let me know if you have any questions.</p>
+        <p>Best,<br>Sonny</p>
+    </div>
+
+    <script>
+        function openEmail() {
+            document.getElementById('inbox').classList.add('hidden');
+            document.getElementById('emailDetail').classList.remove('hidden');
+        }
+        function goBack() {
+            document.getElementById('emailDetail').classList.add('hidden');
+            document.getElementById('inbox').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
