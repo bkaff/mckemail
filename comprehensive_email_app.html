@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Mock Email App</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; }
+.header { background: #f1f1f1; padding: 10px; text-align: center; }
+.container { display: flex; }
+.sidebar { width: 200px; background: #eee; padding: 10px; }
+.sidebar h3 { margin-top: 0; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin: 8px 0; }
+.main { flex: 1; padding: 10px; }
+.search { margin-bottom: 10px; }
+.email-list { list-style: none; padding: 0; }
+.email-item { padding: 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+.email-item:hover { background: #f9f9f9; }
+.email-content { display: none; }
+.back-button { margin-bottom: 10px; cursor: pointer; color: blue; }
+@media (max-width: 600px) {
+  .container { flex-direction: column; }
+  .sidebar { width: 100%; }
+}
+</style>
+<script>
+function showEmail(id) {
+  document.getElementById('email-list').style.display = 'none';
+  document.getElementById('email-content-' + id).style.display = 'block';
+}
+function goBack() {
+  document.querySelectorAll('.email-content').forEach(e => e.style.display = 'none');
+  document.getElementById('email-list').style.display = 'block';
+}
+</script>
+</head>
+<body>
+<div class='header'><h2>hongtae.kim@mckinsey.com</h2></div>
+<div class='container'>
+  <div class='sidebar'>
+    <h3>Menu</h3>
+    <ul>
+      <li>Inbox</li>
+      <li>Starred</li>
+      <li>Sent</li>
+      <li>Drafts</li>
+      <li><strong>Labels</strong></li>
+      <li>Research</li>
+      <li>Project</li>
+      <li>Insights</li>
+      <li>Meeting</li>
+      <li>Personal</li>
+      <li>Admin</li>
+    </ul>
+  </div>
+  <div class='main'>
+    <input class='search' type='text' placeholder='Search mail...' style='width:100%; padding:8px;'>
+    <ul id='email-list' class='email-list'>
+<li class='email-item' onclick='showEmail(0)'><strong>Project Update – Retail Strategy</strong><br><span>david.yoo@mckinsey.com</span> – <span>Nov 05</span></li><li class='email-item' onclick='showEmail(1)'><strong>Research Update – GenAI in Supply Chains</strong><br><span>sarah.kim@mckinsey.com</span> – <span>Nov 09</span></li><li class='email-item' onclick='showEmail(2)'><strong>Insight Newsletter – November Edition</strong><br><span>sonny.kim@mckinsey.com</span> – <span>Nov 02</span></li><li class='email-item' onclick='showEmail(3)'><strong>Meeting Follow-up – Q4 Planning</strong><br><span>jane.lee@mckinsey.com</span> – <span>Nov 01</span></li><li class='email-item' onclick='showEmail(4)'><strong>Client Feedback – Pricing Deck</strong><br><span>sonny.kim@mckinsey.com</span> – <span>Nov 07</span></li><li class='email-item' onclick='showEmail(5)'><strong>Workshop Prep – Tier 2 Cities</strong><br><span>alex.cho@mckinsey.com</span> – <span>Nov 09</span></li><li class='email-item' onclick='showEmail(6)'><strong>Data Pack – Consumer Sentiment</strong><br><span>sarah.kim@mckinsey.com</span> – <span>Nov 07</span></li><li class='email-item' onclick='showEmail(7)'><strong>Internal Review – Strategy Alignment</strong><br><span>david.yoo@mckinsey.com</span> – <span>Nov 03</span></li><li class='email-item' onclick='showEmail(8)'><strong>Weekly Brief – Market Trends</strong><br><span>sonny.kim@mckinsey.com</span> – <span>Nov 08</span></li><li class='email-item' onclick='showEmail(9)'><strong>Engagement Kickoff – LATAM Expansion</strong><br><span>jane.lee@mckinsey.com</span> – <span>Nov 02</span></li><li class='email-item' onclick='showEmail(10)'><strong>Research Summary – Competitive Landscape</strong><br><span>alex.cho@mckinsey.com</span> – <span>Nov 04</span></li><li class='email-item' onclick='showEmail(11)'><strong>Newsletter – Innovation Insights</strong><br><span>jane.lee@mckinsey.com</span> – <span>Nov 08</span></li><li class='email-item' onclick='showEmail(12)'><strong>Project Wrap-up – Digital Transformation</strong><br><span>alex.cho@mckinsey.com</span> – <span>Nov 02</span></li><li class='email-item' onclick='showEmail(13)'><strong>Client Request – Additional Analysis</strong><br><span>david.yoo@mckinsey.com</span> – <span>Nov 03</span></li><li class='email-item' onclick='showEmail(14)'><strong>Team Sync – Monday Agenda</strong><br><span>minji.park@mckinsey.com</span> – <span>Nov 03</span></li><li class='email-item' onclick='showEmail(15)'><strong>Insight Drop – Behavioral Economics</strong><br><span>minji.park@mckinsey.com</span> – <span>Nov 04</span></li><li class='email-item' onclick='showEmail(16)'><strong>Follow-up – Stakeholder Interviews</strong><br><span>david.yoo@mckinsey.com</span> – <span>Nov 02</span></li><li class='email-item' onclick='showEmail(17)'><strong>Update – KPI Dashboard</strong><br><span>sarah.kim@mckinsey.com</span> – <span>Nov 06</span></li><li class='email-item' onclick='showEmail(18)'><strong>Reminder – Deck Submission</strong><br><span>jane.lee@mckinsey.com</span> – <span>Nov 02</span></li><li class='email-item' onclick='showEmail(19)'><strong>Note – Travel Itinerary</strong><br><span>jane.lee@mckinsey.com</span> – <span>Nov 02</span></li></ul>
+    <div id='email-content-0' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Project Update – Retail Strategy</h3>
+      <p><strong>From:</strong> david.yoo@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 05</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Project Update – Retail Strategy</li><li>Point 2 for Project Update – Retail Strategy</li><li>Point 3 for Project Update – Retail Strategy</li></ul><p>Best,<br>David</p>
+    </div>
+    
+    <div id='email-content-1' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Research Update – GenAI in Supply Chains</h3>
+      <p><strong>From:</strong> sarah.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 09</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Research Update – GenAI in Supply Chains</li><li>Point 2 for Research Update – GenAI in Supply Chains</li><li>Point 3 for Research Update – GenAI in Supply Chains</li></ul><p>Best,<br>Sarah</p>
+    </div>
+    
+    <div id='email-content-2' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Insight Newsletter – November Edition</h3>
+      <p><strong>From:</strong> sonny.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Insight Newsletter – November Edition</li><li>Point 2 for Insight Newsletter – November Edition</li><li>Point 3 for Insight Newsletter – November Edition</li></ul><p>Best,<br>Sonny</p>
+    </div>
+    
+    <div id='email-content-3' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Meeting Follow-up – Q4 Planning</h3>
+      <p><strong>From:</strong> jane.lee@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 01</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Meeting Follow-up – Q4 Planning</li><li>Point 2 for Meeting Follow-up – Q4 Planning</li><li>Point 3 for Meeting Follow-up – Q4 Planning</li></ul><p>Best,<br>Jane</p>
+    </div>
+    
+    <div id='email-content-4' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Client Feedback – Pricing Deck</h3>
+      <p><strong>From:</strong> sonny.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 07</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Client Feedback – Pricing Deck</li><li>Point 2 for Client Feedback – Pricing Deck</li><li>Point 3 for Client Feedback – Pricing Deck</li></ul><p>Best,<br>Sonny</p>
+    </div>
+    
+    <div id='email-content-5' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Workshop Prep – Tier 2 Cities</h3>
+      <p><strong>From:</strong> alex.cho@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 09</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Workshop Prep – Tier 2 Cities</li><li>Point 2 for Workshop Prep – Tier 2 Cities</li><li>Point 3 for Workshop Prep – Tier 2 Cities</li></ul><p>Best,<br>Alex</p>
+    </div>
+    
+    <div id='email-content-6' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Data Pack – Consumer Sentiment</h3>
+      <p><strong>From:</strong> sarah.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 07</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Data Pack – Consumer Sentiment</li><li>Point 2 for Data Pack – Consumer Sentiment</li><li>Point 3 for Data Pack – Consumer Sentiment</li></ul><p>Best,<br>Sarah</p>
+    </div>
+    
+    <div id='email-content-7' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Internal Review – Strategy Alignment</h3>
+      <p><strong>From:</strong> david.yoo@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 03</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Internal Review – Strategy Alignment</li><li>Point 2 for Internal Review – Strategy Alignment</li><li>Point 3 for Internal Review – Strategy Alignment</li></ul><p>Best,<br>David</p>
+    </div>
+    
+    <div id='email-content-8' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Weekly Brief – Market Trends</h3>
+      <p><strong>From:</strong> sonny.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 08</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Weekly Brief – Market Trends</li><li>Point 2 for Weekly Brief – Market Trends</li><li>Point 3 for Weekly Brief – Market Trends</li></ul><p>Best,<br>Sonny</p>
+    </div>
+    
+    <div id='email-content-9' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Engagement Kickoff – LATAM Expansion</h3>
+      <p><strong>From:</strong> jane.lee@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Engagement Kickoff – LATAM Expansion</li><li>Point 2 for Engagement Kickoff – LATAM Expansion</li><li>Point 3 for Engagement Kickoff – LATAM Expansion</li></ul><p>Best,<br>Jane</p>
+    </div>
+    
+    <div id='email-content-10' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Research Summary – Competitive Landscape</h3>
+      <p><strong>From:</strong> alex.cho@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 04</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Research Summary – Competitive Landscape</li><li>Point 2 for Research Summary – Competitive Landscape</li><li>Point 3 for Research Summary – Competitive Landscape</li></ul><p>Best,<br>Alex</p>
+    </div>
+    
+    <div id='email-content-11' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Newsletter – Innovation Insights</h3>
+      <p><strong>From:</strong> jane.lee@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 08</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Newsletter – Innovation Insights</li><li>Point 2 for Newsletter – Innovation Insights</li><li>Point 3 for Newsletter – Innovation Insights</li></ul><p>Best,<br>Jane</p>
+    </div>
+    
+    <div id='email-content-12' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Project Wrap-up – Digital Transformation</h3>
+      <p><strong>From:</strong> alex.cho@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Project Wrap-up – Digital Transformation</li><li>Point 2 for Project Wrap-up – Digital Transformation</li><li>Point 3 for Project Wrap-up – Digital Transformation</li></ul><p>Best,<br>Alex</p>
+    </div>
+    
+    <div id='email-content-13' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Client Request – Additional Analysis</h3>
+      <p><strong>From:</strong> david.yoo@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 03</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Client Request – Additional Analysis</li><li>Point 2 for Client Request – Additional Analysis</li><li>Point 3 for Client Request – Additional Analysis</li></ul><p>Best,<br>David</p>
+    </div>
+    
+    <div id='email-content-14' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Team Sync – Monday Agenda</h3>
+      <p><strong>From:</strong> minji.park@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 03</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Team Sync – Monday Agenda</li><li>Point 2 for Team Sync – Monday Agenda</li><li>Point 3 for Team Sync – Monday Agenda</li></ul><p>Best,<br>Minji</p>
+    </div>
+    
+    <div id='email-content-15' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Insight Drop – Behavioral Economics</h3>
+      <p><strong>From:</strong> minji.park@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 04</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Insight Drop – Behavioral Economics</li><li>Point 2 for Insight Drop – Behavioral Economics</li><li>Point 3 for Insight Drop – Behavioral Economics</li></ul><p>Best,<br>Minji</p>
+    </div>
+    
+    <div id='email-content-16' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Follow-up – Stakeholder Interviews</h3>
+      <p><strong>From:</strong> david.yoo@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Follow-up – Stakeholder Interviews</li><li>Point 2 for Follow-up – Stakeholder Interviews</li><li>Point 3 for Follow-up – Stakeholder Interviews</li></ul><p>Best,<br>David</p>
+    </div>
+    
+    <div id='email-content-17' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Update – KPI Dashboard</h3>
+      <p><strong>From:</strong> sarah.kim@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 06</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Update – KPI Dashboard</li><li>Point 2 for Update – KPI Dashboard</li><li>Point 3 for Update – KPI Dashboard</li></ul><p>Best,<br>Sarah</p>
+    </div>
+    
+    <div id='email-content-18' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Reminder – Deck Submission</h3>
+      <p><strong>From:</strong> jane.lee@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Reminder – Deck Submission</li><li>Point 2 for Reminder – Deck Submission</li><li>Point 3 for Reminder – Deck Submission</li></ul><p>Best,<br>Jane</p>
+    </div>
+    
+    <div id='email-content-19' class='email-content'>
+      <div class='back-button' onclick='goBack()'>&larr; Back to Inbox</div>
+      <h3>Note – Travel Itinerary</h3>
+      <p><strong>From:</strong> jane.lee@mckinsey.com</p>
+      <p><strong>To:</strong> hongtae.kim@mckinsey.com</p>
+      <p><strong>Date:</strong> Nov 02</p>
+      <p>Hi Hongtae,</p><p>Here’s a quick update:</p><ul><li>Point 1 for Note – Travel Itinerary</li><li>Point 2 for Note – Travel Itinerary</li><li>Point 3 for Note – Travel Itinerary</li></ul><p>Best,<br>Jane</p>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>
