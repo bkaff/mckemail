@@ -1,0 +1,378 @@
+
+<html>
+<head>
+    <title>McKinsey Secure Mail</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        .header { background: #003e74; color: white; padding: 10px; text-align: center; font-size: 18px; }
+        .inbox { padding: 10px; }
+        .email-item { background: white; padding: 10px; margin-bottom: 8px; border-radius: 5px; cursor: pointer; }
+        .email-sender { font-weight: bold; }
+        .email-subject { color: #003e74; }
+        .email-preview { color: #555; font-size: 14px; }
+        .email-date { text-align: right; font-size: 12px; color: #888; }
+        .email-detail { padding: 15px; }
+        button { background: #003e74; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
+    </style>
+    <script>
+        function showEmail(id) {
+            document.getElementById('inbox').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+        function goBack() {
+            document.getElementById('inbox').style.display = 'block';
+            var details = document.getElementsByClassName('email-detail');
+            for (var i = 0; i < details.length; i++) {
+                details[i].style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">McKinsey Secure Mail<br><small>hongtae.kim@mckinsey.com</small></div>
+    <div id="inbox" class="inbox">
+        
+    <div class="email-item" onclick="showEmail('email0')">
+        <div class="email-sender">Liam Brown</div>
+        <div class="email-subject">Project Update: Q4 Strategy Review</div>
+        <div class="email-preview">Leadership confirmed priorities for next quarter...</div>
+        <div class="email-date">Nov 01, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email1')">
+        <div class="email-sender">Amelia White</div>
+        <div class="email-subject">Client Feedback on Workshop</div>
+        <div class="email-preview">Client appreciated the clarity in our recommendations...</div>
+        <div class="email-date">Nov 02, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email2')">
+        <div class="email-sender">Olivia Davis</div>
+        <div class="email-subject">Deck for Monday's Steering Committee</div>
+        <div class="email-preview">Please review the attached deck before Monday...</div>
+        <div class="email-date">Nov 03, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email3')">
+        <div class="email-sender">Hyunwoo Jung</div>
+        <div class="email-subject">Travel Plans for Seoul Engagement</div>
+        <div class="email-preview">Flight and hotel details for Seoul trip enclosed...</div>
+        <div class="email-date">Nov 04, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email4')">
+        <div class="email-sender">Lucas Hall</div>
+        <div class="email-subject">Data Pack: Market Analysis</div>
+        <div class="email-preview">Updated market assumptions included in the pack...</div>
+        <div class="email-date">Nov 05, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email5')">
+        <div class="email-sender">Eunji Cho</div>
+        <div class="email-subject">Follow-up: Digital Transformation Brief</div>
+        <div class="email-preview">Summary of digital brief and next steps...</div>
+        <div class="email-date">Nov 06, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email6')">
+        <div class="email-sender">Benjamin Jackson</div>
+        <div class="email-subject">Team Sync: Weekly Agenda</div>
+        <div class="email-preview">Agenda items for this week's sync...</div>
+        <div class="email-date">Nov 07, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email7')">
+        <div class="email-sender">Mia Thomas</div>
+        <div class="email-subject">Client Meeting Notes</div>
+        <div class="email-preview">Key takeaways from today's client meeting...</div>
+        <div class="email-date">Nov 08, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email8')">
+        <div class="email-sender">Grace Young</div>
+        <div class="email-subject">Proposal Draft for Retail Client</div>
+        <div class="email-preview">Initial draft of proposal ready for review...</div>
+        <div class="email-date">Nov 09, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email9')">
+        <div class="email-sender">Jaewon Choi</div>
+        <div class="email-subject">Research Insights: Consumer Trends</div>
+        <div class="email-preview">Highlights from recent consumer behavior study...</div>
+        <div class="email-date">Nov 10, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email10')">
+        <div class="email-sender">Soojin Lee</div>
+        <div class="email-subject">Workshop Prep: Logistics Overview</div>
+        <div class="email-preview">Checklist and logistics for upcoming workshop...</div>
+        <div class="email-date">Nov 01, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email11')">
+        <div class="email-sender">William Moore</div>
+        <div class="email-subject">Final Review: Presentation Slides</div>
+        <div class="email-preview">Final version of slides attached for review...</div>
+        <div class="email-date">Nov 02, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email12')">
+        <div class="email-sender">Emma Smith</div>
+        <div class="email-subject">Engagement Wrap-up Checklist</div>
+        <div class="email-preview">Steps to close out current engagement...</div>
+        <div class="email-date">Nov 03, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email13')">
+        <div class="email-sender">Alex Jones</div>
+        <div class="email-subject">New Joiner Onboarding Plan</div>
+        <div class="email-preview">Plan for onboarding new team members...</div>
+        <div class="email-date">Nov 04, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email14')">
+        <div class="email-sender">Sophia Taylor</div>
+        <div class="email-subject">Budget Allocation for Q1</div>
+        <div class="email-preview">Breakdown of Q1 budget allocations...</div>
+        <div class="email-date">Nov 05, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email15')">
+        <div class="email-sender">Daniel Kim</div>
+        <div class="email-subject">Client Call Summary</div>
+        <div class="email-preview">Summary of today's client call...</div>
+        <div class="email-date">Nov 06, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email16')">
+        <div class="email-sender">Noah Miller</div>
+        <div class="email-subject">Internal Review: Strategy Deck</div>
+        <div class="email-preview">Internal feedback on strategy deck...</div>
+        <div class="email-date">Nov 07, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email17')">
+        <div class="email-sender">Minho Park</div>
+        <div class="email-subject">Next Steps: Pharma Project</div>
+        <div class="email-preview">Action items for pharma engagement...</div>
+        <div class="email-date">Nov 08, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email18')">
+        <div class="email-sender">Ava Wilson</div>
+        <div class="email-subject">Feedback Request: Slide Draft</div>
+        <div class="email-preview">Requesting feedback on slide draft...</div>
+        <div class="email-date">Nov 09, 2025</div>
+    </div>
+    
+    <div class="email-item" onclick="showEmail('email19')">
+        <div class="email-sender">James Anderson</div>
+        <div class="email-subject">Reminder: Submission Deadline</div>
+        <div class="email-preview">Reminder to submit final materials by Friday...</div>
+        <div class="email-date">Nov 10, 2025</div>
+    </div>
+    
+    </div>
+    
+    <div class="email-detail" id="email0" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Project Update: Q4 Strategy Review</h2>
+        <p><strong>From:</strong> liam.brown@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 01, 2025</p>
+        <p>Leadership confirmed priorities for next quarter...</p>
+        <ul><li>Client priorities finalized</li><li>Data pack updated</li><li>Workshop scheduled</li><li>Next steps outlined</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email1" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Client Feedback on Workshop</h2>
+        <p><strong>From:</strong> amelia.white@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 02, 2025</p>
+        <p>Client appreciated the clarity in our recommendations...</p>
+        <ul><li>Positive feedback on clarity</li><li>Suggestions for next phase</li><li>Follow-up items listed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email2" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Deck for Monday's Steering Committee</h2>
+        <p><strong>From:</strong> olivia.davis@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 03, 2025</p>
+        <p>Please review the attached deck before Monday...</p>
+        <ul><li>Deck includes revised timeline</li><li>Client comments incorporated</li><li>Review requested by EOD</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email3" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Travel Plans for Seoul Engagement</h2>
+        <p><strong>From:</strong> hyunwoo.jung@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 04, 2025</p>
+        <p>Flight and hotel details for Seoul trip enclosed...</p>
+        <ul><li>Flight booked for Nov 5</li><li>Hotel confirmation attached</li><li>Meeting agenda shared</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email4" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Data Pack: Market Analysis</h2>
+        <p><strong>From:</strong> lucas.hall@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 05, 2025</p>
+        <p>Updated market assumptions included in the pack...</p>
+        <ul><li>Market data refreshed</li><li>Charts updated</li><li>Assumptions revised</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email5" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Follow-up: Digital Transformation Brief</h2>
+        <p><strong>From:</strong> eunji.cho@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 06, 2025</p>
+        <p>Summary of digital brief and next steps...</p>
+        <ul><li>Digital brief summarized</li><li>Key metrics highlighted</li><li>Next steps proposed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email6" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Team Sync: Weekly Agenda</h2>
+        <p><strong>From:</strong> benjamin.jackson@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 07, 2025</p>
+        <p>Agenda items for this week's sync...</p>
+        <ul><li>Agenda includes 5 items</li><li>Client updates to be discussed</li><li>Prep materials attached</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email7" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Client Meeting Notes</h2>
+        <p><strong>From:</strong> mia.thomas@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 08, 2025</p>
+        <p>Key takeaways from today's client meeting...</p>
+        <ul><li>Meeting notes compiled</li><li>Action items listed</li><li>Client feedback noted</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email8" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Proposal Draft for Retail Client</h2>
+        <p><strong>From:</strong> grace.young@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 09, 2025</p>
+        <p>Initial draft of proposal ready for review...</p>
+        <ul><li>Proposal draft ready</li><li>Budget estimates included</li><li>Review requested</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email9" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Research Insights: Consumer Trends</h2>
+        <p><strong>From:</strong> jaewon.choi@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 10, 2025</p>
+        <p>Highlights from recent consumer behavior study...</p>
+        <ul><li>Consumer trends analyzed</li><li>Charts and graphs included</li><li>Insights summarized</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email10" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Workshop Prep: Logistics Overview</h2>
+        <p><strong>From:</strong> soojin.lee@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 01, 2025</p>
+        <p>Checklist and logistics for upcoming workshop...</p>
+        <ul><li>Workshop location confirmed</li><li>Attendee list finalized</li><li>Materials printed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email11" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Final Review: Presentation Slides</h2>
+        <p><strong>From:</strong> william.moore@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 02, 2025</p>
+        <p>Final version of slides attached for review...</p>
+        <ul><li>Slides finalized</li><li>Client branding applied</li><li>Review requested</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email12" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Engagement Wrap-up Checklist</h2>
+        <p><strong>From:</strong> emma.smith@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 03, 2025</p>
+        <p>Steps to close out current engagement...</p>
+        <ul><li>Wrap-up checklist shared</li><li>Final deliverables listed</li><li>Team feedback requested</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email13" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>New Joiner Onboarding Plan</h2>
+        <p><strong>From:</strong> alex.jones@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 04, 2025</p>
+        <p>Plan for onboarding new team members...</p>
+        <ul><li>Onboarding plan drafted</li><li>Training modules listed</li><li>Schedule proposed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email14" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Budget Allocation for Q1</h2>
+        <p><strong>From:</strong> sophia.taylor@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 05, 2025</p>
+        <p>Breakdown of Q1 budget allocations...</p>
+        <ul><li>Budget split by category</li><li>Forecast included</li><li>Approval needed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email15" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Client Call Summary</h2>
+        <p><strong>From:</strong> daniel.kim@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 06, 2025</p>
+        <p>Summary of today's client call...</p>
+        <ul><li>Call summary attached</li><li>Client concerns noted</li><li>Follow-up actions listed</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email16" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Internal Review: Strategy Deck</h2>
+        <p><strong>From:</strong> noah.miller@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 07, 2025</p>
+        <p>Internal feedback on strategy deck...</p>
+        <ul><li>Strategy deck reviewed</li><li>Comments added</li><li>Next draft due tomorrow</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email17" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Next Steps: Pharma Project</h2>
+        <p><strong>From:</strong> minho.park@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 08, 2025</p>
+        <p>Action items for pharma engagement...</p>
+        <ul><li>Pharma project milestones updated</li><li>Client feedback integrated</li><li>Next steps outlined</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email18" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Feedback Request: Slide Draft</h2>
+        <p><strong>From:</strong> ava.wilson@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 09, 2025</p>
+        <p>Requesting feedback on slide draft...</p>
+        <ul><li>Slide draft attached</li><li>Feedback requested</li><li>Deadline approaching</li></ul>
+    </div>
+    
+    <div class="email-detail" id="email19" style="display:none">
+        <button onclick="goBack()">← Back to Inbox</button>
+        <h2>Reminder: Submission Deadline</h2>
+        <p><strong>From:</strong> james.anderson@mckinsey.com<br>
+        <strong>To:</strong> hongtae.kim@mckinsey.com<br>
+        <strong>Date:</strong> Nov 10, 2025</p>
+        <p>Reminder to submit final materials by Friday...</p>
+        <ul><li>Submission deadline: Nov 10</li><li>Checklist included</li><li>Final review pending</li></ul>
+    </div>
+    
+</body>
+</html>
